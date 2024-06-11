@@ -1,0 +1,27 @@
+[
+	{
+		"nombre" : "Herramientas",
+		"descripcion" : "Herramientas para todo tipo de acción",
+		"imagen" : "herramientas.png"
+	},
+	{
+		"nombre" : "Aromaticas",
+		"descripcion" : "Plantas aromáticas",
+		"imagen" : "aromaticas.png"
+	},
+	{
+		"nombre" : "Frutales",
+		"descripcion" : "Árboles pequeños de producción frutal",
+		"imagen" : "frutales.png"
+	},
+	{
+		"nombre" : "Herbaceas",
+		"descripcion" : "Plantas para jardin decorativas",
+		"imagen" : "herbaceas.png"
+	},
+	{
+		"nombre" : "Ornamentales",
+		"descripcion" : "Plantas vistosas para la decoración del jardín",
+		"imagen" : "ornamentales.png"
+	}
+]

@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  jardineria_dba:
+    image: postgres:13.3
+    container_name: mjmgPostgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: pswJardineria
+      POSTGRES_DB: mjmgJardineria
+      POSTGRES_USER: postgress
+    volumes:
+      - ./postgres_dba:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
