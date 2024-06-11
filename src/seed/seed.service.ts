@@ -5,8 +5,6 @@ import { Repository } from 'typeorm';
 import { MjmgProducto } from 'src/mjmg-productos/entities/mjmg-producto.entity';
 import { MjmgGamasService } from 'src/mjmg-gamas/mjmg-gamas.service';
 import { MjmgProductosService } from 'src/mjmg-productos/mjmg-productos.service';
-import { CreateMjmgProductoDto } from 'src/mjmg-productos/dto/create-mjmg-producto.dto';
-import { skip } from 'node:test';
 
 @Injectable()
 export class SeedService {

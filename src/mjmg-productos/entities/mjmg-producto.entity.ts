@@ -32,6 +32,6 @@ export class MjmgProducto {
     @Column('float')
     pcoste: number;
 
-    @ManyToOne(() => MjmgGama, gama => gama.productos)
+    @ManyToOne(() => MjmgGama, gama => gama.productos, { eager: true })
     codgama: MjmgGama;
 }

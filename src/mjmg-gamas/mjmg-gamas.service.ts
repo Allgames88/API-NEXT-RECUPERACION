@@ -54,29 +54,15 @@ export class MjmgGamasService {
   }
 
   async mjmgGetGama(nombre:string) {
-    const gama = await this.repo.findOneBy({ nombre });
+    const gama = await this.repo.findOne({
+      where: { nombre },
+      relations: ['productos'],
+  });
 
     if(!gama){
-      throw new NotFoundException(`La Gama llamada ${nombre} no ha sido encontrada :()` )
+      throw new NotFoundException(`La Gama llamada ${nombre} no ha sido encontrada :(` )
     }else{
-
-      const productList = await this.productosService.findAll();
-
-      const resultList = productList.map( producto => ({
-        codigo: producto.codigo,
-        nombre: producto.nombre,
-        imagen: producto.imagen,
-        proveedor: producto.proveedor,
-        descripcion: producto.descripcion,
-        stock: producto.stock,
-        pvp: producto.pvp,
-        pcoste: producto.pcoste
-      }))
-
-      return {
-        gama: gama,
-        productList: productList
-      }
+      return gama
     }
 
   }
